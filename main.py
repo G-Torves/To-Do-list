@@ -1,7 +1,6 @@
 from fastapi import FastAPI
-from fastapi import HTTPException , Depends
-from database import connection
-from models import Tarefas
-from schema import CreateTarefa , ResponseTarefa
 
 app = FastAPI()
+from task_routes import task_router
+
+app.include_router(task_router)
