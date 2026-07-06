@@ -1,6 +1,11 @@
 from sqlalchemy import create_engine, Column, Integer, String, Boolean, ForeignKey
 from sqlalchemy.orm import declarative_base
 
+# Alembic
+# 1. alembic init alembic                         { Inicia o alembic }
+# 2. alembic revision --autogenerate -m "message" { Cria uma nova versão }
+# 3. alembic upgrade head                         { Cria o banco de dados }
+
 db = create_engine("sqlite:///banco.db")
 Base = declarative_base()
 
