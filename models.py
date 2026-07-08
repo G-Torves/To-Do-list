@@ -10,7 +10,7 @@ db = create_engine("sqlite:///banco.db")
 Base = declarative_base()
 
 # Usuarios
-class usuario(Base):
+class Usuario(Base):
     __tablename__ = "usuarios"
 
     id = Column("id", Integer, primary_key=True, autoincrement=True)
@@ -24,7 +24,7 @@ class usuario(Base):
         self.senha = senha
 
 # Tarefas
-class tarefa(Base):
+class Tarefa(Base):
     __tablename__ = "tarefas"
 
     id = Column("id", Integer, primary_key=True, autoincrement=True)
